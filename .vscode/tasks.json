@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build SFML",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "接球游戏-0.0.1.cpp",
+                "-o", "接球游戏-0.0.1.exe",
+                "-I", "E:/msys2/ucrt64/include",
+                "-L", "E:/msys2/ucrt64/lib",
+                "-lsfml-graphics",
+                "-lsfml-window", 
+                "-lsfml-system",
+                "-static-libgcc",
+                "-static-libstdc++"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "编译SFML项目"
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": "./game.exe",
+            "dependsOn": ["Build SFML"],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "detail": "运行编译好的程序"
+        }
+    ]
+}
