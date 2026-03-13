@@ -6,8 +6,8 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "接球游戏-0.0.1.cpp",
-                "-o", "接球游戏-0.0.1.exe",
+                "接球游戏-0.0.2.cpp",
+                "-o", "接球游戏-0.0.2.exe",
                 "-I", "E:/msys2/ucrt64/include",
                 "-L", "E:/msys2/ucrt64/lib",
                 "-lsfml-graphics",
